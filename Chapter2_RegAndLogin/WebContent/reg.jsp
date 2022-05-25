@@ -7,7 +7,7 @@
 <title>注册</title>
 </head>
 <body>
-<form action="userServlet" method="post">
+<form action="UserServlet" method="post">
 	<p>用户注册</p>
 	<p><input type="text" name= "username" placeholder="用户名" ></p>
 	<p><input type="password" name="password" placeholder="密码"></p>
