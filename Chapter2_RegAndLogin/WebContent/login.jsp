@@ -38,7 +38,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action="CheckUser" method="post">
+      <form class="form-signin" action="UserServlet" method="post">
         <h2 class="form-signin-heading">用户登录</h2>
         <label for="inputEmail" class="sr-only">用户名</label>
         <input type="text" name="username"  id="inputusername" class="form-control" placeholder="username" required autofocus>

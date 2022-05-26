@@ -12,8 +12,8 @@
 	<p><input type="text" name= "username" placeholder="用户名" ></p>
 	<p><input type="password" name="password" placeholder="密码"></p>
 	<p><input type="password" name="cmpassword" placeholder="确认密码"></p>
-	
-	<p><input type="submit" name="submitBnt" value="注册"></p> 
+	<p><input type="hidden" name="method" value="reg"></p>
+	<p><input type="submit" name="submitBnt" value="注册"> </p>
 </form>              
 </body>
 </html>

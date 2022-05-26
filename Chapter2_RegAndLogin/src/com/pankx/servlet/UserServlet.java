@@ -36,19 +36,34 @@ public class UserServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
-		
+		String method = request.getParameter("method");
 		String username = request.getParameter("username");
 		String pwd = request.getParameter("password");
 		Student student = new Student();
-		if(request.getParameter("username") != null) {
-			student.setUser(username);
-			student.setPassword(pwd);		
-			database.put(username,student);
-			request.getSession().setAttribute("username", username);
+		if("reg".equals(method)) {			
+			if(request.getParameter("username") != null) {
+				student.setId(1);
+				student.setUser(username);
+				student.setPassword(pwd);		
+				database.put(username,student);
+				request.getSession().setAttribute("username", username);
 //			response.getWriter().print("注册成功");
-			response.sendRedirect("regSuccess.jsp");
-		}else{
-			response.getWriter().print("用户名不能为空");
+				response.sendRedirect("regSuccess.jsp");
+			}else{
+				response.getWriter().print("用户名不能为空");
+			}
+		}else if("login".equals(method)) {
+			if(username != null && pwd != null) {
+				if(username.equals(database.get(username).getUser()) && pwd.equals(database.get(username).getPassword()) ) {
+				
+					request.getSession().setAttribute("username", username);
+					response.sendRedirect("loginSuccess.jsp");
+				}else {
+					response.getWriter().print("用户名或密码错误！！");
+					response.sendRedirect("login.jsp");
+				}
+				
+			}
 		}
 	}
 
