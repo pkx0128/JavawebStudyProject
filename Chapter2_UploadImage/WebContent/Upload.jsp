@@ -7,7 +7,7 @@
 <title>UploadImages</title>
 </head>
 <body>
-<form action="UploadServlet" method="POST">
+<form action="UploadServlet" method="POST" enctype="multipart/form-data">
 	<input type="file" name="pic">
 	<input type="submit" value="上传图片">
 </form>
