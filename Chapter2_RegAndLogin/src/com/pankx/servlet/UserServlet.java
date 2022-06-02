@@ -53,16 +53,16 @@ public class UserServlet extends HttpServlet {
 				response.getWriter().print("用户名不能为空");
 			}
 		}else if("login".equals(method)) {
-			if(username != null && pwd != null) {
+			if(username != null && pwd != null && !database.isEmpty()) {
 				if(username.equals(database.get(username).getUser()) && pwd.equals(database.get(username).getPassword()) ) {
 				
 					request.getSession().setAttribute("username", username);
 					response.sendRedirect("loginSuccess.jsp");
-				}else {
-					response.getWriter().print("用户名或密码错误！！");
-					response.sendRedirect("login.jsp");
 				}
-				
+			}else {
+				System.out.println();
+				response.getWriter().print("用户名或密码错误！！");
+				response.sendRedirect("login.jsp");
 			}
 		}
 	}
