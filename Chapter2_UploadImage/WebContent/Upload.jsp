@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>UploadImages</title>
 </head>
 <body>
-
+<form action="UploadServlet" method="POST">
+	<input type="file" name="pic">
+	<input type="submit" value="上传图片">
+</form>
 </body>
 </html>
