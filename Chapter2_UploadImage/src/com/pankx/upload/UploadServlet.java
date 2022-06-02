@@ -2,6 +2,8 @@ package com.pankx.upload;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -43,6 +45,7 @@ public class UploadServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		Part part = request.getPart("pic");
 		String filename = part.getSubmittedFileName();
+		filename = new Date().getTime() + filename;
 		String savePath =  request.getServletContext().getRealPath("/upload/images");
 		System.out.println(savePath);
 		File f = new File(savePath+"/");
