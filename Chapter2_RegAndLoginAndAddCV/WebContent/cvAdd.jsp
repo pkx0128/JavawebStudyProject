@@ -35,7 +35,7 @@
   </head>
 <body>
     <div class="container">
-    <form action="" class="form-horizontal">
+    <form action="AddCVServlet" method="post" class="form-horizontal">
     	<h2 class="text-center">简历添加 </h2>
     	<div class="form-group">
     		<label for="name" class="col-sm-2 control-label">姓名</label>
@@ -53,9 +53,9 @@
     	</div>
     	
     	<div class="form-group">
-    		<label for="pro" class="col-sm-2 control-label">专业</label>
+    		<label for="major" class="col-sm-2 control-label">专业</label>
     		<div class="col-sm-10">
-	    		<select class="form-control">
+	    		<select class="form-control" id="major" name="major">
 	    			<option value="1">计算机科学与技术</option>
 	    			<option value="2">软件工程</option>
 	    			<option value="3">大数据</option>

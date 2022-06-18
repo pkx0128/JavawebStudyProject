@@ -6,6 +6,43 @@ public class Student {
 	private String user;
 	private String password;
 	
+	private String realName;
+	private String 	sex;
+	private String major;
+	private String phone;
+	private String intro;
+	
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getMajor() {
+		return major;
+	}
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getIntro() {
+		return intro;
+	}
+	public void setIntro(String intro) {
+		this.intro = intro;
+	}
 	public int getId() {
 		return id;
 	}
@@ -23,6 +60,11 @@ public class Student {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "realname=" + realName + " sex=" + sex + " major=" + major + " phone="+phone + " intro=" + intro;
 	}
 	
 	
