@@ -53,6 +53,18 @@
     	</div>
     	
     	<div class="form-group">
+    		<label for="pro" class="col-sm-2 control-label">专业</label>
+    		<div class="col-sm-10">
+	    		<select class="form-control">
+	    			<option value="1">计算机科学与技术</option>
+	    			<option value="2">软件工程</option>
+	    			<option value="3">大数据</option>
+	    			<option value="4">人工智能</option>
+	    		</select>
+	    	</div>
+    	</div>
+    	
+    	<div class="form-group">
     		<label for="phone" class="col-sm-2 control-label">联系电话</label>
     		<div class="col-sm-10">
     			<input type="text" class="form-control" id="phone" name="phone" placeholder="联系电话" required autofocus>
