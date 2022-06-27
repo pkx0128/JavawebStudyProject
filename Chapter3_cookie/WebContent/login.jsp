@@ -38,14 +38,14 @@
 
     <div class="container">
 
-      <form class="form-signin" action="UserServlet" method="post">
+      <form class="form-signin" action="CheckUserServlet" method="post">
         <h2 class="form-signin-heading">用户登录</h2>
         <label for="inputEmail" class="sr-only">用户名</label>
         <input type="text" name="username"  id="inputusername" class="form-control" placeholder="username" required autofocus>
         <label for="inputPassword"  class="sr-only">密码</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <input type="hidden" name="method" value="login"/>
-        <p>自动登录<input type="checkbox" value="1" name="remeber"/></p>
+        <p>自动登录<input type="checkbox" value="1" name="remember"/></p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
       </form>
 
