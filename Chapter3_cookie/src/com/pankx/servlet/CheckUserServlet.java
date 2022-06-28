@@ -55,6 +55,7 @@ public class CheckUserServlet extends HttpServlet {
 			//TODO 暂时不对用户名密码做验证
 			if(remember.equals("1")) {
 				Cookie cookie = new Cookie("username",user);
+				cookie.setMaxAge(60*60);
 				response.addCookie(cookie);
 			}
 			response.sendRedirect("welcome.jsp");
