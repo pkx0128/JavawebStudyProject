@@ -35,7 +35,9 @@ public class ShoppingCarListServlet extends HttpServlet {
 		Map<String,Integer> shoppingCar = (Map<String,Integer>)session.getAttribute("shoppingCar");
 		String books = null;
 		if(shoppingCar != null && shoppingCar.size() > 0) {
-			response.getWriter().print(shoppingCar);
+			for(String book:shoppingCar.keySet()) {
+				response.getWriter().println("<p>" + book + "->" + shoppingCar.get(book) + "</p>");		
+			}
 		}
 	}
 
