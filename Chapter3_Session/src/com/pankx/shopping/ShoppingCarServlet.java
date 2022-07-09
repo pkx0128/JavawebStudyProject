@@ -58,7 +58,8 @@ public class ShoppingCarServlet extends HttpServlet {
 			}
 			session.setAttribute("shoppingCar", car);
 		}
-		response.getWriter().print(session.getAttribute("shoppingCar"));
+		//response.getWriter().print(session.getAttribute("shoppingCar"));
+		response.sendRedirect("ShoppingCarListServlet");
 	}
 
 }
