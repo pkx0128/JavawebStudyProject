@@ -2,7 +2,7 @@ package com.pankx.po;
 
 public class Student {
 
-	private int id;
+	private Integer id;
 	private String user;
 	private String password;
 	
@@ -43,10 +43,10 @@ public class Student {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getUser() {
